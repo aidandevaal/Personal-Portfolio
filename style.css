@@ -16,13 +16,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
     padding: 20px 10%;
-    background: #757575;
+    background: linear-gradient(#757575 75%, transparent);
+
     /*background-image: linear-gradient(to bottom, #757575, #000000);*/
 }
 
@@ -44,6 +45,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     text-decoration: none;
+    transition: .3s;
 }
 
 .logo::before {
@@ -56,6 +58,10 @@ body {
     background: #757575;
     animation: showRight .6s ease forwards;
     animation-delay: .4s;
+}
+
+.logo:hover {
+    color: #e48b25;
 }
 
 .navbar a {
@@ -96,7 +102,7 @@ body {
 
 .bg {
     opacity: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -337,6 +343,10 @@ body {
 
 .home-dir a:hover::before {
     width: 100%;
+}
+
+.grid-content {
+    display: grid;
 }
 
 @keyframes showRight {
